@@ -52,7 +52,7 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[6.0.0, )"
             }

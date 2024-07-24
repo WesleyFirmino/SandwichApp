@@ -5,7 +5,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<SandwichContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("MySQLConnections")));
+var MySql = builder.Configuration.GetConnectionString("MySQLConnections");
+builder.Services.AddDbContext<SandwichContext>(options => options.UseMySql(MySql, ServerVersion.AutoDetect(MySql)));
 
 var app = builder.Build();
 
