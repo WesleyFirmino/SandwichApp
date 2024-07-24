@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SandwichApp.Context;
+using SandwichApp.Repositories;
+using SandwichApp.Repositories.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 var MySql = builder.Configuration.GetConnectionString("MySQLConnections");
 builder.Services.AddDbContext<SandwichContext>(options => options.UseMySql(MySql, ServerVersion.AutoDetect(MySql)));
+builder.Services.AddTransient<ISandwichRepository, SandwichRepository>();
+builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 
 var app = builder.Build();
 
