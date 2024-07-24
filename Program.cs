@@ -1,7 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using SandwichApp.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<SandwichContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("MySQLConnections")));
 
 var app = builder.Build();
 
