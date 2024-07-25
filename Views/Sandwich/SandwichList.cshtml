@@ -1,0 +1,18 @@
+@model IEnumerable<SandwichApp.Models.Sandwich>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<div>
+    <h1>Lista de Sandwiches</h1>
+</div>
+
+@foreach(var sandwich in Model)
+{
+    <div>
+        <h4>Sandwich: @sandwich.Name</h4>
+        <p><img src="@sandwich.ImageURL"></p>
+        <p>Preço : @sandwich.Price.ToString("c")</p>
+    </div>
+}
