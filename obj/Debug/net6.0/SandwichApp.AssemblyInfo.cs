@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SandwichApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f8a51cfb1cd512c26edefe00fbbadf339e54ad9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2851825e0cab910cb939c4c024088a0c1bb550e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("SandwichApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SandwichApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
