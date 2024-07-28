@@ -11,6 +11,9 @@ var MySql = builder.Configuration.GetConnectionString("MySQLConnections");
 builder.Services.AddDbContext<SandwichContext>(options => options.UseMySql(MySql, ServerVersion.AutoDetect(MySql)));
 builder.Services.AddTransient<ISandwichRepository, SandwichRepository>();
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
+builder.Services.AddMemoryCache();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -22,6 +25,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseSession();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
