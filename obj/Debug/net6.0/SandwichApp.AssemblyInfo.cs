@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SandwichApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f537dacf3c19820b8f7d3c09684dd35329547c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fedf09326e1f1637b3f8471465fc935af3e1f39")]
 [assembly: System.Reflection.AssemblyProductAttribute("SandwichApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SandwichApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

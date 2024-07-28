@@ -11,4 +11,5 @@ public class SandwichContext : DbContext
 
     public DbSet<Category> Categories { get; set; }
     public DbSet<Sandwich> Sandwiches { get; set; }
+    public DbSet<CarBuyItem> CarBuyItems { get; set; }
 }
