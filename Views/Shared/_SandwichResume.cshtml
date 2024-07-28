@@ -1,0 +1,8 @@
+@model Sandwich
+
+<div class="col-sm-4 col-md-4 col-lg-4">
+    <p><img class="img-fluid" src="@Model.ImageURL"></p>
+    <h3>Preço: @Model.Price.ToString("c")</h3>
+    <h4>Sandwich: @Model.Name</h4>
+    <p>@Model.ShortDescription</p>
+</div>
