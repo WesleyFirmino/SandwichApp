@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using SandwichApp.Repositories.Interfaces;
+using SandwichApp.ViewModels;
 
 namespace SandwichApp.Controllers
 {
@@ -14,8 +15,13 @@ namespace SandwichApp.Controllers
 
         public IActionResult SandwichList()
         {
-            var sandwich = _sandwichRepository.Sandwiches;
-            return View(sandwich);
+            //var sandwich = _sandwichRepository.Sandwiches;
+            //return View(sandwich);
+            var sandwichListViewModel = new SandwichListViewModel();
+            sandwichListViewModel.Sandwiches = _sandwichRepository.Sandwiches;
+            sandwichListViewModel.CurrentCategory = "Current Category";
+
+            return View(sandwichListViewModel);
         }
     }
 }
